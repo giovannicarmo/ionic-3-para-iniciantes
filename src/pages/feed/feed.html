@@ -20,33 +20,32 @@
       <ion-avatar item-start>
         <img src="assets/images/cr7.jpg">
       </ion-avatar>
-      <h2 class="feedTitle">{{ nomeUsuario }}</h2>
-      <p class="feedDate">7 de outubro de 2017</p>
+      <h2 class="feedTitle">{{ objetoFeed.titulo }}</h2>
+      <p class="feedDate">{{ objetoFeed.data }}</p>
     </ion-item>
 
     <img src="assets/images/post.jpg">
 
     <ion-card-content>
-      <p>Reinaldo e Bruno, dois VIADÃO discutindo se java é melhor que php.</p>
-      <p>Após a discussão, aquele tradicional suquinho de laranja...</p>
+      <p>{{ objetoFeed.descricao }}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
+          <div>{{ objetoFeed.qntLikes }}</div>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
+          <div>{{ objetoFeed.qntComments }}</div>
         </button>
       </ion-col>
       <ion-col center text-center>
         <ion-note>
-          11h ago
+            {{ objetoFeed.timeComment }}
         </ion-note>
       </ion-col>
     </ion-row>
