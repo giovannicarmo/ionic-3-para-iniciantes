@@ -11,12 +11,18 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class MovieProvider {
 
+  private baseApiPath = "https://api.themoviedb.org/3";
+
   constructor(public http: Http) {
     console.log('Hello MovieProvider Provider');
   }
 
   getLatestMovies(){
 
-    return this.http.get("http://");
+    return this.http.get(this.baseApiPath + "/movie/popular?api_key=" + this.getApiKey());
+  }
+
+  getApiKey(): string{
+    return "da023767b64cfeb75f92bc622fa511b6";
   }
 }
