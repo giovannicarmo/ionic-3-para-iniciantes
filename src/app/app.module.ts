@@ -14,6 +14,7 @@ import { FeedPageModule } from '../pages/feed/feed.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
 import { HttpModule } from '@angular/http';
 import { MovieProvider } from '../providers/movie/movie';
+import { ConfigProvider } from '../providers/config/config';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MovieProvider } from '../providers/movie/movie';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MovieProvider,
-    MovieProvider
+    MovieProvider,
+    ConfigProvider
   ]
 })
 export class AppModule {}
